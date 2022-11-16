@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from math import log
 
-img = cv2.imread("bridge.jpg" , 0)  # cv2.COLOR_GRAYSCALE
+img = cv2.imread("bridge.jpg" , 0)  # cv2.IMREAD_GRAYSCALE
 
 # uzun yontem
 # c = 255 / np.log(1 + np.max(img))
