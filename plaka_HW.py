@@ -8,12 +8,10 @@ img = cv2.imread('plaka.png', 0).astype(float) // 255
 kernel = np.array([[0,1,0],[1,1,1],[0,1,0]])
 dilation = img.copy()
 
-# Görüntüyü satır ve sütun bazında döngüyle gez
+
 for i in range(1, img.shape[0] - 1):
     for j in range(1, img.shape[1] - 1):
-        # Dilatasyon işlemini gerçekleştir
-        # result = img[i-1:i+2, j-1:j+2] * kernel
-        # eroded_pixel = np.min(img[i-1:i+2, j-1:j+2] * kernel)
+        # dilated_pixel = np.min(img[i-1:i+2, j-1:j+2] * kernel)
         dilated_pixel = \
             img[i - 1][j - 1] * kernel[0][0] + \
             img[i - 1][j] * kernel[0][1] + \
